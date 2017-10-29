@@ -2,12 +2,11 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 
 const requireProps = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired,
     year: PropTypes.number,
-    rating: PropTypes.number,
-    added: PropTypes.object
+    rating: PropTypes.number
 };
 
 class Card extends Component {

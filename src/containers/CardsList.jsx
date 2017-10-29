@@ -5,7 +5,7 @@ import Card from "../components/Card";
 
 const requireProps = {
     cardsList: PropTypes.shape({
-        id: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         picture: PropTypes.string.isRequired,
         year: PropTypes.number,

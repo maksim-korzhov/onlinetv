@@ -34,9 +34,11 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         compress: true, // gzip all files
-        //port: 9000,
+        host: "0.0.0.0",
+        port: 9090,
         stats: 'errors-only', // не показывать весь лог, только ошибки,
-        open: true // Всегда открывать в новом окне
+        open: true, // Всегда открывать в новом окне,
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 
 import Header from "../components/Header";
-import App from "../components/App";
+import CardsList from "../containers/CardsList";
 
 class Main extends Component {
     constructor(props) {
@@ -16,7 +16,17 @@ class Main extends Component {
             <div>
                 <Header />
                 <br/><br/><br/>
-                <App />
+                <div className="container">
+                    <div className="row">
+                        <CardsList />
+                    </div>
+
+                    <hr />
+
+                    <footer>
+                        <p>&copy; Company 2017</p>
+                    </footer>
+                </div>
             </div>
         );
     }

@@ -1,7 +1,12 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 import Card from "../components/Card";
+
+import * as actions from "../actions";
+
 
 const requireProps = {
     cardsList: PropTypes.shape({
@@ -16,17 +21,23 @@ const requireProps = {
 
 class CardsList extends Component {
     componentWillMount() {
-        this.props.fetchVideoList();
+        setTimeout(() => this.props.fetchVideoList(), 2000);
     }
 
     renderCardList() {
-        return this.props.cardsList.map((item, i) => {
-            return (
-                <div key={item.id} className="col-md-4">
-                    <Card />
-                </div>
-            );
-        });
+        const videoList = this.props.videoList;
+
+        if( videoList.length > 0 ) {
+            return videoList.map((item, i) => {
+                return (
+                    <div key={item.id} className="col-md-4">
+                        <Card videoData={item}/>
+                    </div>
+                );
+            });
+        }
+
+        return "Loading...";
     }
 
     render() {
@@ -40,4 +51,12 @@ class CardsList extends Component {
 
 CardsList.requireProps = requireProps;
 
-export default CardsList;
+function mapStateToProps({ videoList }) {
+    return { videoList };
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators( actions, dispatch );
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardsList);

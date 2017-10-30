@@ -7,8 +7,10 @@ module.exports = {
         index: './src/index.jsx',
     },
     output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: '[name].bundle.js'
+        //path: path.resolve(__dirname, "dist"),
+        path: "/dist/",
+        publicPath: "/",
+        filename: 'bundle.js'
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -19,7 +21,8 @@ module.exports = {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     use: ["css-loader", "sass-loader"],
-                    publicPath: __dirname + '/dist/',
+                    //publicPath: __dirname + '/dist/',
+                    publicPath: '/dist/',
                     filename: "[name].[ext]"
                 })
             },
@@ -32,7 +35,8 @@ module.exports = {
     },
     // Настройки сервера разработки
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
+        //contentBase: path.join(__dirname, "dist"),
+        contentBase: "/dist/",
         compress: true, // gzip all files
         host: "0.0.0.0",
         port: 9090,

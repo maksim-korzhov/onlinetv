@@ -3,8 +3,10 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import {createStore, applyMiddleware} from "redux";
 import ReduxPromise from "redux-promise";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {BrowserRouter, Route, Switch, IndexRoute} from "react-router-dom";
+import {composeWithDevTools} from "redux-devtools-extension";
 
+import Wrapper from "./components/Wrapper";
 import Main from "./containers/Main";
 import VideoDetail from "./containers/VideoDetail";
 
@@ -12,16 +14,19 @@ import reducers from "./reducers";
 
 import style from "../style/style.scss";
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+const createStoreWithMiddleware = composeWithDevTools(applyMiddleware(ReduxPromise))(createStore);
 
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
-            <Switch>
-                <Route exact path="/" component={Main}></Route>
-                <Route exact path="/video" component={Main}></Route>
-                <Route exact path="/video/:id" component={VideoDetail}></Route>
-            </Switch>
+            <Wrapper>
+                <Switch>
+                    <Route path="/video/new" component={VideoDetail} />
+                    <Route path="/video/:id" component={VideoDetail} />
+                    <Route path="/video" component={Main} />
+                    <Route path="/" component={Main} />
+                </Switch>
+            </Wrapper>
         </BrowserRouter>
     </Provider>,
     document.getElementById("root")

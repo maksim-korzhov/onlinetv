@@ -9,7 +9,7 @@ import * as actions from "../actions";
 
 
 const requireProps = {
-    cardsList: PropTypes.shape({
+    videos: PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         picture: PropTypes.string.isRequired,
@@ -19,13 +19,13 @@ const requireProps = {
     })
 };
 
-class CardsList extends Component {
+class VideoList extends Component {
     componentWillMount() {
         setTimeout(() => this.props.fetchVideoList(), 2000);
     }
 
-    renderCardList() {
-        const videoList = this.props.videoList;
+    renderVideoList() {
+        const videoList = this.props.videoData.videos || [];
 
         if( videoList.length > 0 ) {
             return videoList.map((item, i) => {
@@ -43,20 +43,20 @@ class CardsList extends Component {
     render() {
         return (
             <ul className="row">
-                {this.renderCardList()}
+                {this.renderVideoList()}
             </ul>
         );
     }
 }
 
-CardsList.requireProps = requireProps;
+VideoList.requireProps = requireProps;
 
-function mapStateToProps({ videoList }) {
-    return { videoList };
+function mapStateToProps({ videoData }) {
+    return { videoData };
 }
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators( actions, dispatch );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CardsList);
+export default connect(mapStateToProps, mapDispatchToProps)(VideoList);

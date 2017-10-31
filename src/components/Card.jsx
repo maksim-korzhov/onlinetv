@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const requireProps = {
     videoData: PropTypes.shape({
@@ -14,6 +15,7 @@ const requireProps = {
 class Card extends Component {
     render() {
         const { id, name, picture, year, rating } = this.props.videoData;
+        const link = `/video/${id}`;
 
         return (
             <div className="card">
@@ -22,7 +24,7 @@ class Card extends Component {
                     <h4 className="card-title">{name}</h4>
                     <p className="card-text">Year: {year}</p>
                     <p className="card-text">Kinopoisk rating: {rating}</p>
-                    <a href="#" className="btn btn-primary">Details</a>
+                    <Link to={link} className="btn btn-primary">Details</Link>
                 </div>
             </div>
         );

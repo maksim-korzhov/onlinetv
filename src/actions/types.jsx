@@ -1,1 +1,2 @@
+export const FETCH_VIDEO = "FETCH_VIDEO";
 export const FETCH_VIDEO_LIST = "FETCH_VIDEO_LIST";

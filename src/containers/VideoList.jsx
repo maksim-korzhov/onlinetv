@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import Card from "../components/Card";
+import SearchForm from "../components/SearchForm";
 
 import * as actions from "../actions";
 
@@ -21,11 +22,12 @@ const requireProps = {
 
 class VideoList extends Component {
     componentWillMount() {
-        setTimeout(() => this.props.fetchVideoList(), 2000);
+        //setTimeout(() => this.props.fetchVideoList(), 2000);
+        this.props.fetchVideoList();
     }
 
     renderVideoList() {
-        const videoList = this.props.videoData.videos || [];
+        const videoList = this.props.videos || [];
 
         if( videoList.length > 0 ) {
             return videoList.map((item, i) => {
@@ -37,22 +39,30 @@ class VideoList extends Component {
             });
         }
 
-        return "Loading...";
+        return <div className="col-sm-12">Loading...</div>;
     }
 
     render() {
         return (
-            <ul className="row">
-                {this.renderVideoList()}
-            </ul>
+            <div className="container">
+                <div className="row">
+                    <SearchForm />
+                </div>
+
+                <hr/>
+
+                <div className="row">
+                    {this.renderVideoList()}
+                </div>
+            </div>
         );
     }
 }
 
 VideoList.requireProps = requireProps;
 
-function mapStateToProps({ videoData }) {
-    return { videoData };
+function mapStateToProps({ videoData: { videos } }) {
+    return { videos };
 }
 
 function mapDispatchToProps(dispatch) {

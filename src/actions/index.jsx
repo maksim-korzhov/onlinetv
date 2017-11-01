@@ -1,12 +1,19 @@
+import axios from "axios";
+
 import {
     FETCH_VIDEO,
     FETCH_VIDEO_LIST
 } from "./types";
 
+const ROOT_URL = "http://localhost:3000";
+
 export function fetchVideoList() {
+    const request = axios.get(`${ROOT_URL}/videos`);
+
     return {
         type: FETCH_VIDEO_LIST,
-        payload: {
+        payload: request
+        /*payload: {
             videos: [
                 {
                     id: 1,
@@ -72,7 +79,7 @@ export function fetchVideoList() {
                     rating: 6.5
                 }
             ]
-        }
+        }*/
     }
 }
 

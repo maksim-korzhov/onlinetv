@@ -14,7 +14,7 @@ export default function( state = {}, action ) {
         case FETCH_VIDEO_LIST:
             return {
                 ...state,
-                videos: action.payload.videos
+                videos: action.payload.data
             };
     }
 

@@ -23,7 +23,7 @@ class Card extends Component {
                 <div className="card-block">
                     <h4 className="card-title">{name}</h4>
                     <p className="card-text">Year: {year}</p>
-                    <p className="card-text">Kinopoisk rating: {rating}</p>
+                    <p className="card-text">IMDb rating: {rating}</p>
                     <Link to={link} className="btn btn-primary">Details</Link>
                 </div>
             </div>

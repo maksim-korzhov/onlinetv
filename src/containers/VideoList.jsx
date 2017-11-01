@@ -32,7 +32,7 @@ class VideoList extends Component {
         if( videoList.length > 0 ) {
             return videoList.map((item, i) => {
                 return (
-                    <div key={item.id} className="col-md-4">
+                    <div key={item.id} className="col-md-3">
                         <Card videoData={item}/>
                     </div>
                 );

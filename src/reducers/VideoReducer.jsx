@@ -9,7 +9,7 @@ export default function( state = {}, action ) {
         case FETCH_VIDEO:
             return {
                 ...state,
-                video: action.payload.video
+                video: action.payload.data
             };
         case FETCH_VIDEO_LIST:
             return {

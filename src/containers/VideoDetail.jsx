@@ -6,42 +6,50 @@ import { bindActionCreators } from "redux";
 import { fetchVideoById } from "../actions/index";
 
 const requireProps = {
-    videoData: PropTypes.shape({
-        video: PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            name: PropTypes.string.isRequired,
-            picture: PropTypes.string.isRequired,
-            year: PropTypes.number,
-            rating: PropTypes.number,
-            added: PropTypes.object
-        }).isRequired
+    video: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        picture: PropTypes.string.isRequired,
+        year: PropTypes.number,
+        rating: PropTypes.number,
+        added: PropTypes.object
     }).isRequired
 };
 
 class VideoDetail extends Component {
     componentWillMount() {
-        this.props.fetchVideoById();
+        const videoId = this.props.match.params.id;
+        this.props.fetchVideoById(videoId);
     }
 
     render() {
-        const videoData = this.props.videoData.video || [];
+        const video = this.props.video || [];
 
-        if( videoData.length === 0 ) {
+        if( video.length === 0 ) {
             return <div>Loading...</div>;
         }
 
         return (
             <div className="row">
                 <div className="col-md-4">
-                    <img src={videoData.picture} alt={videoData.name} />
+                    <img src={video.picture} alt={video.name} className="img-fluid" />
                 </div>
                 <div className="col-md-8">
                     <Link className="btn btn-primary float-sm-right" to="/">X Close</Link>
-                    <h1>{videoData.name}</h1>
-                    <ul>
-                        <li>Rating: {videoData.rating}</li>
-                        <li>Year: {videoData.year}</li>
-                    </ul>
+                    <h2>{video.name}({video.year})</h2>
+                    <h5>{video.originalName}</h5>
+                    <br />
+
+                    <p><strong>Director:</strong> {video.director}</p>
+                    <p><strong>Coutry:</strong> {video.country}</p>
+                    <p><strong>Type:</strong> {video.genre.reduce((total, current) => `${total}, ${current}`)}</p>
+                    <p><strong>IMDb:</strong> {video.rating}</p>
+
+                    <br/>
+                    <dl>
+                        <dt><strong>Description:</strong></dt>
+                        <dd>{video.description}</dd>
+                    </dl>
                 </div>
             </div>
         );
@@ -50,8 +58,8 @@ class VideoDetail extends Component {
 
 VideoDetail.requireProps = requireProps;
 
-function mapStateToProps( { videoData } ) {
-    return { videoData };
+function mapStateToProps( { videoData: { video } } ) {
+    return { video };
 }
 
 function mapDispatchToProps(dispatch) {

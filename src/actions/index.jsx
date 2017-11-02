@@ -84,9 +84,12 @@ export function fetchVideoList() {
 }
 
 export function fetchVideoById(videoId) {
+    const request = axios.get(`${ROOT_URL}/videos/${videoId}`);
+
     return {
         type: FETCH_VIDEO,
-        payload: {
+        payload: request
+        /*payload: {
             video: {
                 id: 7,
                 name: "Рик и Морти",
@@ -94,6 +97,6 @@ export function fetchVideoById(videoId) {
                 year: 2013,
                 rating: 8.8
             }
-        }
+        }*/
     };
 }

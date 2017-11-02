@@ -3,12 +3,17 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const requireProps = {
-    videoData: PropTypes.shape({
+    video: PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
+        originalName: PropTypes.string,
+        director: PropTypes.string,
+        country: PropTypes.arrayOf(PropTypes.string),
+        genre: PropTypes.arrayOf(PropTypes.string),
         picture: PropTypes.string.isRequired,
         year: PropTypes.number,
-        rating: PropTypes.number
+        IMDb: PropTypes.number,
+        description: PropTypes.string
     }).isRequired
 };
 

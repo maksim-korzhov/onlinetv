@@ -26,7 +26,11 @@ class VideoDetail extends Component {
         const video = this.props.video || [];
 
         if( video.length === 0 ) {
-            return <div>Loading...</div>;
+            if( this.props.isLoaded ) {
+                return <div>Video not found</div>;
+            } else {
+                return <div>Loading...</div>;
+            }
         }
 
         return (
@@ -36,7 +40,7 @@ class VideoDetail extends Component {
                 </div>
                 <div className="col-md-8">
                     <Link className="btn btn-primary float-sm-right" to="/">X Close</Link>
-                    <h2>{video.name}({video.year})</h2>
+                    <h2>{video.name} ({video.year})</h2>
                     <h5>{video.originalName}</h5>
                     <br />
 
@@ -58,8 +62,8 @@ class VideoDetail extends Component {
 
 VideoDetail.requireProps = requireProps;
 
-function mapStateToProps( { videoData: { video } } ) {
-    return { video };
+function mapStateToProps( { videoData: { video, isLoaded } } ) {
+    return { video, isLoaded };
 }
 
 function mapDispatchToProps(dispatch) {

@@ -1,20 +1,28 @@
 import {
     FETCH_VIDEO,
-    FETCH_VIDEO_LIST
+    FETCH_VIDEO_LIST,
+    SEARCH_VIDEO
 } from "../actions/types";
-import * as actions from "../actions"
 
-export default function( state = {}, action ) {
+export default function( state = { isLoaded: false }, action ) {
     switch(action.type) {
         case FETCH_VIDEO:
             return {
                 ...state,
-                video: action.payload.data
+                video: action.payload.data,
+                isLoaded: true
             };
         case FETCH_VIDEO_LIST:
             return {
                 ...state,
-                videos: action.payload.data
+                videos: action.payload.data,
+                isLoaded: true
+            };
+        case SEARCH_VIDEO:
+            return {
+                ...state,
+                videos: action.payload.data,
+                isLoaded: true
             };
     }
 

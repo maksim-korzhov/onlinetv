@@ -2,7 +2,8 @@ import axios from "axios";
 
 import {
     FETCH_VIDEO,
-    FETCH_VIDEO_LIST
+    FETCH_VIDEO_LIST,
+    SEARCH_VIDEO
 } from "./types";
 
 const ROOT_URL = "http://localhost:3000";
@@ -99,4 +100,13 @@ export function fetchVideoById(videoId) {
             }
         }*/
     };
+}
+
+export function searchVideo(name) {
+    const request = axios.get(`${ROOT_URL}/videos?name_like=${name}`);
+
+    return {
+        type: SEARCH_VIDEO,
+        payload: request
+    }
 }

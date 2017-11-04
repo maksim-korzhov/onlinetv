@@ -1,13 +1,12 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin'); // для работы с html
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); // для отделения css в отдельный файл
-const path = require('path'); // для работы с путями
+const webpack = require("webpack");
 
 module.exports = {
     entry: {
         index: './src/index.jsx',
     },
     output: {
-        //path: path.resolve(__dirname, "dist"),
         path: "/dist/",
         publicPath: "/",
         filename: 'bundle.js'
@@ -21,7 +20,6 @@ module.exports = {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     use: ["css-loader", "sass-loader"],
-                    //publicPath: __dirname + '/dist/',
                     publicPath: '/dist/',
                     filename: "[name].[ext]"
                 })
@@ -35,14 +33,14 @@ module.exports = {
     },
     // Настройки сервера разработки
     devServer: {
-        //contentBase: path.join(__dirname, "dist"),
         contentBase: "/dist/",
         compress: true, // gzip all files
         host: "0.0.0.0",
         port: 9090,
         stats: 'errors-only', // не показывать весь лог, только ошибки,
         open: true, // Всегда открывать в новом окне,
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -53,8 +51,9 @@ module.exports = {
         }),
         new ExtractTextPlugin({
             filename: "[name].css",
-            //disabled: false,
             allChunks: true
-        })
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };

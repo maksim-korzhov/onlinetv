@@ -9,6 +9,7 @@ import {composeWithDevTools} from "redux-devtools-extension";
 import Wrapper from "./components/Wrapper";
 import Main from "./containers/Main";
 import VideoDetail from "./containers/VideoDetail";
+import VideoNew from "./containers/VideoNew";
 
 import reducers from "./reducers";
 

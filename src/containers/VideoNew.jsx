@@ -7,7 +7,7 @@ import { addVideo } from "../actions";
 class VideoNew extends Component {
     render() {
         return (
-            <div></div>
+            <div>New Video</div>
         );
     }
 }

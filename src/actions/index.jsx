@@ -7,7 +7,7 @@ import {
     ADD_VIDEO
 } from "./types";
 
-const ROOT_URL = "http://localhost:3000";
+const ROOT_URL = "http://159.203.117.100:3000";
 
 export function fetchVideoList() {
     const request = axios.get(`${ROOT_URL}/videos`);

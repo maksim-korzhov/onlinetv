@@ -1,10 +1,11 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin'); // для работы с html
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); // для отделения css в отдельный файл
-const webpack = require("webpack");
+//const webpack = require("webpack");
 
 module.exports = {
     entry: {
-        index: './src/index.jsx',
+        //'react-hot-loader/patch',
+        index: './src/index.jsx'
     },
     output: {
         path: "/dist/",
@@ -40,7 +41,7 @@ module.exports = {
         stats: 'errors-only', // не показывать весь лог, только ошибки,
         open: true, // Всегда открывать в новом окне,
         historyApiFallback: true,
-        hot: true
+        //hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -53,7 +54,7 @@ module.exports = {
             filename: "[name].css",
             allChunks: true
         }),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        //new webpack.NamedModulesPlugin(),
+        //new webpack.HotModuleReplacementPlugin()
     ]
 };

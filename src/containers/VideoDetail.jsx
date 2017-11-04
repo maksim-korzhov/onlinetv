@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+
 import { fetchVideoById } from "../actions/index";
 
 const requireProps = {
@@ -20,8 +21,6 @@ const requireProps = {
     }).isRequired
 };
 
-
-
 class VideoDetail extends Component {
     componentWillMount() {
         const videoId = this.props.match.params.id;
@@ -32,7 +31,7 @@ class VideoDetail extends Component {
         const video = this.props.video || [];
 
         if( video.length === 0 ) {
-            if( this.props.isLoaded ) {
+            if( this.props.isVideoLoaded ) {
                 return <div>Video not found</div>;
             } else {
                 return <div>Loading...</div>;
@@ -68,8 +67,8 @@ class VideoDetail extends Component {
 
 VideoDetail.requireProps = requireProps;
 
-function mapStateToProps( { videoData: { video, isLoaded } } ) {
-    return { video, isLoaded };
+function mapStateToProps( { videoData: { video, isVideoLoaded } } ) {
+    return { video, isVideoLoaded };
 }
 
 function mapDispatchToProps(dispatch) {

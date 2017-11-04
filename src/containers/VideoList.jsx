@@ -28,7 +28,7 @@ class VideoList extends Component {
 
     renderVideoList() {
         const videoList = this.props.videos || [];
-        const isLoaded = this.props.isLoaded || false;
+        const isLoaded = this.props.isVideoListLoaded || false;
 
         if( videoList.length > 0 ) {
             return videoList.map((item, i) => {
@@ -49,7 +49,7 @@ class VideoList extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container videoList">
                 <div className="row">
                     <SearchForm />
                 </div>
@@ -66,12 +66,14 @@ class VideoList extends Component {
 
 VideoList.requireProps = requireProps;
 
-function mapStateToProps({ videoData: { videos, isLoaded } }) {
-    return { videos, isLoaded };
+function mapStateToProps({ videoData: { videos, isVideoListLoaded } }) {
+    return { videos, isVideoListLoaded };
 }
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators( actions, dispatch );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(VideoList);
+VideoList = connect(mapStateToProps, mapDispatchToProps)(VideoList);
+
+export default VideoList;

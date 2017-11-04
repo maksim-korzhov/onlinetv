@@ -21,7 +21,7 @@ ReactDOM.render(
         <BrowserRouter>
             <Wrapper>
                 <Switch>
-                    {/*<Route path="/video/new" component={VideoNew} />*/}
+                    <Route path="/video/new" component={VideoNew} />
                     <Route path="/video/:id" component={VideoDetail} />
                     <Route path="/video" component={Main} />
                     <Route path="/" component={Main} />

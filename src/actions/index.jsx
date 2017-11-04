@@ -3,7 +3,8 @@ import axios from "axios";
 import {
     FETCH_VIDEO,
     FETCH_VIDEO_LIST,
-    SEARCH_VIDEO
+    SEARCH_VIDEO,
+    ADD_VIDEO
 } from "./types";
 
 const ROOT_URL = "http://localhost:3000";
@@ -109,4 +110,10 @@ export function searchVideo(name) {
         type: SEARCH_VIDEO,
         payload: request
     }
+}
+
+export function addVideo() {
+    return {
+        type: ADD_VIDEO
+    };
 }

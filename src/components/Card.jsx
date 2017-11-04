@@ -12,7 +12,7 @@ const requireProps = {
         genre: PropTypes.arrayOf(PropTypes.string),
         picture: PropTypes.string.isRequired,
         year: PropTypes.number,
-        IMDb: PropTypes.number,
+        rating: PropTypes.number,
         description: PropTypes.string
     }).isRequired
 };

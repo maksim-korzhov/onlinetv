@@ -1,10 +1,11 @@
 import {
     FETCH_VIDEO,
     FETCH_VIDEO_LIST,
-    SEARCH_VIDEO
+    SEARCH_VIDEO,
+    ADD_VIDEO
 } from "../actions/types";
 
-export default function( state = { isLoaded: false }, action ) {
+export default function( state = { isLoaded: false, isVideoAdded: false }, action ) {
     switch(action.type) {
         case FETCH_VIDEO:
             return {
@@ -24,6 +25,11 @@ export default function( state = { isLoaded: false }, action ) {
                 videos: action.payload.data,
                 isLoaded: true
             };
+        case ADD_VIDEO:
+            return {
+                ...state,
+                isVideoAdded: true
+            }
     }
 
     return state;

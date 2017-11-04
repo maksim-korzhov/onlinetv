@@ -10,11 +10,17 @@ const requireProps = {
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         picture: PropTypes.string.isRequired,
+        originalName: PropTypes.string,
+        director: PropTypes.string,
+        country: PropTypes.arrayOf( PropTypes.string ),
+        genre: PropTypes.arrayOf( PropTypes.genre ),
         year: PropTypes.number,
         rating: PropTypes.number,
-        added: PropTypes.object
+        description: PropTypes.string
     }).isRequired
 };
+
+
 
 class VideoDetail extends Component {
     componentWillMount() {
@@ -45,7 +51,7 @@ class VideoDetail extends Component {
                     <br />
 
                     <p><strong>Director:</strong> {video.director}</p>
-                    <p><strong>Coutry:</strong> {video.country}</p>
+                    <p><strong>Coutry:</strong> {video.country.reduce((total, current) => `${total}, ${current}`)}</p>
                     <p><strong>Type:</strong> {video.genre.reduce((total, current) => `${total}, ${current}`)}</p>
                     <p><strong>IMDb:</strong> {video.rating}</p>
 

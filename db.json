@@ -5,8 +5,15 @@
       "name": "Джек Ричер",
       "originalName": "Jack Reacher",
       "director": "Кристофер МакКуорри",
-      "country": ["США"],
-      "genre": ["боевик", "триллер", "детектив", "криминал"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "боевик",
+        "триллер",
+        "детектив",
+        "криминал"
+      ],
       "picture": "http://onvix.tv/uploads/posters/9f/fb/29e895a4952990bec5b4647187eb/medium_d50b99ef2a99d69bac3b03ef.jpg",
       "year": 2012,
       "rating": 7,
@@ -17,8 +24,15 @@
       "name": "Пол: Секретный материальчик",
       "originalName": "Paul",
       "director": "Грег Моттола",
-      "country": ["США", "Великобритания"],
-      "genre": ["фантастика", "комедия", "приключения"],
+      "country": [
+        "США",
+        "Великобритания"
+      ],
+      "genre": [
+        "фантастика",
+        "комедия",
+        "приключения"
+      ],
       "picture": "http://onvix.tv/uploads/posters/f5/3a/84f48dd39c882d016ca2ddf09228/medium_789e1e1dabfadb9141557d44.jpg",
       "year": 2011,
       "rating": 7.2,
@@ -29,8 +43,14 @@
       "name": "Неадекватные люди",
       "originalName": "",
       "director": "Роман Каримов",
-      "country": ["Россия"],
-      "genre": ["драма", "мелодрама", "комедия"],
+      "country": [
+        "Россия"
+      ],
+      "genre": [
+        "драма",
+        "мелодрама",
+        "комедия"
+      ],
       "picture": "http://onvix.tv/uploads/posters/1e/35/25dcafaa4435098f8c0b96ecdd6f/medium_21790f1c04edf327bdbea632.jpg",
       "year": 2010,
       "rating": 7.6,
@@ -41,8 +61,14 @@
       "name": "Джон Картер",
       "originalName": "John Carter",
       "director": "Эндрю Стэнтон",
-      "country": ["США"],
-      "genre": ["фантастика", "боевик", "приключения"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "фантастика",
+        "боевик",
+        "приключения"
+      ],
       "picture": "http://onvix.tv/uploads/posters/e0/83/b180be5893e8f978282259072e05/medium_33c5746a9eba96e6958de7ab.jpg",
       "year": 2012,
       "rating": 6.9,
@@ -53,8 +79,13 @@
       "name": "Хорошо быть тихоней",
       "originalName": "The Perks of Being a Wallflower",
       "director": "Стивен Чбоски",
-      "country": ["США"],
-      "genre": ["драма", "мелодрама"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "драма",
+        "мелодрама"
+      ],
       "picture": "http://onvix.tv/uploads/posters/de/31/559567106ade010a248ebb9ea309/medium_93f727ac36492715ebc65161.jpg",
       "year": 2012,
       "rating": 8,
@@ -65,8 +96,13 @@
       "name": "Няня",
       "originalName": "The Babysitter",
       "director": "МакДжи",
-      "country": ["США"],
-      "genre": ["комедия", "триллер"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "комедия",
+        "триллер"
+      ],
       "picture": "http://onvix.tv/uploads/posters/b7/ec/d1944688d347b7646ce2fac898e3/medium_743da2bca0efca696150b9a9.jpg",
       "year": 2012,
       "rating": 6.6,
@@ -77,8 +113,14 @@
       "name": "Рик и Морти",
       "originalName": "Rick and Morty",
       "director": "Пит Мишелс, Уэсли Арчер, Брайан Ньютон",
-      "country": ["США"],
-      "genre": ["мультфильм", "комедия", "фантастика"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "мультфильм",
+        "комедия",
+        "фантастика"
+      ],
       "picture": "http://onvix.tv/uploads/posters/a5/90/d5a60524f931f1c4489d570804a6/medium_1edef15be8c0df31a9a8e5b2.jpg",
       "year": 2013,
       "rating": 9.4,
@@ -89,8 +131,15 @@
       "name": "Грань будущего",
       "originalName": "Edge of Tomorrow",
       "director": "Даг Лайман",
-      "country": ["США", "Канада"],
-      "genre": ["фантастика", "боевик", "приключения"],
+      "country": [
+        "США",
+        "Канада"
+      ],
+      "genre": [
+        "фантастика",
+        "боевик",
+        "приключения"
+      ],
       "picture": "http://onvix.tv/uploads/posters/f8/57/c77c6d525bdb9a11123be7142b46/medium_87236bbc83fc6652bf11a5c4.jpg",
       "year": 2014,
       "rating": 7.9,
@@ -101,8 +150,13 @@
       "name": "Стеклянный замок",
       "originalName": "The Glass Castle",
       "director": "Дестин Креттон",
-      "country": ["США"],
-      "genre": ["драма", "биография"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "драма",
+        "биография"
+      ],
       "picture": "http://onvix.tv/uploads/posters/44/1b/c0e60748bc17654cbd0e55ecd384/large_dde9bdcab09c38c6d557644d.jpg",
       "year": 2017,
       "rating": 7.1,
@@ -113,8 +167,18 @@
       "name": "Планета обезьян: Война",
       "originalName": "War for the Planet of the Apes",
       "director": "Мэтт Ривз",
-      "country": ["США", "Канада", "Новая Зеландия"],
-      "genre": ["фантастика", "боевик", "триллер", "драма", "приключения"],
+      "country": [
+        "США",
+        "Канада",
+        "Новая Зеландия"
+      ],
+      "genre": [
+        "фантастика",
+        "боевик",
+        "триллер",
+        "драма",
+        "приключения"
+      ],
       "picture": "http://onvix.tv/uploads/posters/eb/9a/6498e4437ef5a62f3097777d3e1d/large_e556053889b88b302a343a3f.jpg",
       "year": 2017,
       "rating": 7.6,
@@ -125,8 +189,17 @@
       "name": "Тёмная башня",
       "originalName": "The Dark Tower",
       "director": "Николай Арсель",
-      "country": ["США"],
-      "genre": ["ужасы", "фантастика", "фэнтези", "боевик", "приключения", "вестерн"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "ужасы",
+        "фантастика",
+        "фэнтези",
+        "боевик",
+        "приключения",
+        "вестерн"
+      ],
       "picture": "http://onvix.tv/uploads/posters/23/91/1e4b8df49ac8c465979be033eaaf/large_344fd0170c8e4781b700fe4d.jpg",
       "year": 2017,
       "rating": 5.8,
@@ -137,8 +210,13 @@
       "name": "Секс-Трип",
       "originalName": "The Sex Trip",
       "director": "Энтони Дж. Коэн",
-      "country": ["США"],
-      "genre": ["фэнтези", "комедия"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "фэнтези",
+        "комедия"
+      ],
       "picture": "http://onvix.tv/uploads/posters/d1/c2/7fe325fea28fe5c367910786e363/large_6a72cec3036a92facabd7387.jpg",
       "year": 2017,
       "rating": 8.1,
@@ -149,8 +227,14 @@
       "name": "Мистер Штайн идёт в онлайн",
       "originalName": "Un profil pour deux",
       "director": "Стефан Робели",
-      "country": ["Франция", "Германия", "Бельгия"],
-      "genre": ["комедия"],
+      "country": [
+        "Франция",
+        "Германия",
+        "Бельгия"
+      ],
+      "genre": [
+        "комедия"
+      ],
       "picture": "http://onvix.tv/uploads/posters/4a/35/a1d2c0002848151c27b8f59b7565/large_748594eae0798eed9c820bce.jpg",
       "year": 2017,
       "rating": 6.5,
@@ -161,8 +245,14 @@
       "name": "Гоголь. Начало",
       "originalName": "",
       "director": "Егор Баранов",
-      "country": ["Россия"],
-      "genre": ["приключения", "триллер", "детектив"],
+      "country": [
+        "Россия"
+      ],
+      "genre": [
+        "приключения",
+        "триллер",
+        "детектив"
+      ],
       "picture": "http://onvix.tv/uploads/posters/47/8e/e5c7ee09489340ec7c8711e3a998/large_f184a379c586c4793f3e4a06.jpg",
       "year": 2017,
       "rating": 6.1,
@@ -173,8 +263,13 @@
       "name": "Охотник с Уолл-стрит",
       "originalName": "The Glass Castle",
       "director": "Дестин Креттон",
-      "country": ["США"],
-      "genre": ["драма", "биография"],
+      "country": [
+        "США"
+      ],
+      "genre": [
+        "драма",
+        "биография"
+      ],
       "picture": "http://onvix.tv/uploads/posters/11/6b/1ca7f215622dd92bfab1fc227e42/medium_2b07bf2bfe5e9a26bac71fc7.jpg",
       "year": 2016,
       "rating": 7.1,
@@ -185,12 +280,59 @@
       "name": "Мяу",
       "originalName": "Miao xing ren",
       "director": "Бенни Чан",
-      "country": ["Гонконг"],
-      "genre": ["фантастика", "комедия"],
+      "country": [
+        "Гонконг"
+      ],
+      "genre": [
+        "фантастика",
+        "комедия"
+      ],
       "picture": "http://onvix.tv/uploads/posters/9d/6e/6f871ff67989dd79a530ebf103c3/large_ed17cf434efbfb26ced16de5.jpg",
       "year": 2017,
       "rating": 5,
       "description": "На Землю прилетает кот-инопланетянин."
+    },
+    {
+      "picture": "//onvix.tv/uploads/posters/27/ee/a13cd02f92f7592d00d8fe8f1739/large_88a0933307e78690b63cba62.jpg",
+      "name": "Валериан и город тысячи планет",
+      "originalName": "Valerian and the City of a Thousand Planets",
+      "director": "Люк Бессон",
+      "country": [
+        "Франция",
+        "Китай",
+        "Бельгия",
+        "ОАЭ",
+        "США",
+        "Германия",
+        "Великобритания",
+        "Канада"
+      ],
+      "genre": [
+        "фантастика",
+        "фэнтези",
+        "боевик",
+        "приключения"
+      ],
+      "year": "2017",
+      "rating": "6.7",
+      "description": "2700 год. Валериан и Лорелин - космические спецагенты, которые по долгу службы впутались в подозрительное дело и стали невольными участниками то ли межгалактического заговора, то ли аферы причудливых поселенцев планеты Альфа, прибывших туда из различных миров со всех уголков галактик.",
+      "id": 17
+    },
+    {
+      "name": "Сингулярность",
+      "originalName": "Singularity",
+      "picture": "http://onvix.tv/uploads/posters/d3/ac/119a6c33f72d5beed809bca80a7c/large_f6455db418d9b9ed389e1690.jpg",
+      "director": "Роберт Коуба",
+      "country": [
+        "Швейцария",
+        "США"
+      ],
+      "genre": [
+        "фантастика"
+      ],
+      "year": "2017",
+      "rating": "-",
+      "id": 18
     }
   ]
 }

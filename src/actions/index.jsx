@@ -112,8 +112,11 @@ export function searchVideo(name) {
     }
 }
 
-export function addVideo() {
+export function addVideo(values) {
+    const request = axios.post(`${ROOT_URL}/videos`, values);
+
     return {
-        type: ADD_VIDEO
+        type: ADD_VIDEO,
+        payload: request
     };
 }
